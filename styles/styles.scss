@@ -1,0 +1,179 @@
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    color: white;
+    background-color: #202731;
+    overflow-x: hidden;
+
+    section {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        min-height: 400px;
+        padding: 100px 20vw;
+
+        .curve {
+            position: absolute;
+            height: 225px;
+            width: 100%;
+            bottom: 0;
+            // background: #000;
+
+            &::before  {
+                content: '';
+                display: block;
+                position: absolute;
+                border-radius: 100% 50%;
+                width: 55%;
+                height: 100%;
+                background-color: #202731;
+                transform: translate(85%, 60%);
+            }
+
+            &::after {
+                content: '';
+                display: block;
+                position: absolute;
+                border-radius: 100% 50%;
+                width: 55%;
+                height: 100%;
+                background-color: #3c31dd;
+                transform: translate(-4%, 40%);
+                z-index: -1;
+            }
+        }
+
+        &.bubble{
+            // background-color: #fff;
+            .container {
+                background-color: #3c31dd;
+                padding: 20%;
+                background-color: rgba($color: #000000, $alpha: 0.5);
+                &:hover {
+                    box-shadow: #3c31dd;
+                    color: #dd3f31;
+                    transform: scale(110%);
+                }
+            }
+
+            &::before {
+                content: '';
+                border-bottom-left-radius: 50% 100%;
+                border-bottom-right-radius: 50% 100%;
+                position: absolute;
+                top: 0;
+                height: 50%;
+                width: 100%;
+                background-color: #ff0066;
+                z-index: -1;
+            }
+
+            &::after {
+                content: '';
+                border-top-left-radius: 50% 100%;
+                border-top-right-radius: 50% 100%;
+                position: absolute;
+                bottom: 0;
+                height: 50%;
+                width: 100%;
+                background-color: #0f0f10;
+                z-index: -1;
+            }
+        }
+
+        &.red {
+            
+            .wave {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                overflow: hidden;
+                line-height: 0;
+            }
+            
+            .wave svg {
+                position: relative;
+                display: block;
+                width: calc(115% + 1.3px);
+                height: 150px;
+            }
+            
+            .wave .shape-fill {
+                fill: #1D1D1D;
+            }
+            
+            /** For mobile devices **/
+            @media (max-width: 767px) {
+                .wave svg {
+                    width: calc(115% + 1.3px);
+                    height: 229px;
+                }
+            }
+        }
+
+        .pink #visual > g:nth-child(2) {
+            visibility: hidden;
+        }
+    }
+}
+
+/* UTILITY CLASSES */
+.spacer {
+    aspect-ratio: 960/300;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.layer1 {
+    background-image: url('../Assets/layered-waves-haikei.svg');
+}
+
+.layer2 {
+    background-image: url('../Assets/layer2.svg');
+}
+.flip {
+    transform: rotate(180deg);
+}
+
+// .blob-wrapper {
+//     position: absolute;
+//     top: 0;
+//     left: 0;
+//     width: 100%;
+//     height: 100%;
+//     z-index: -1;
+// }
+.blob-motion {
+    position: absolute;
+    transform: translateY(-20%);
+}
+.blue {
+    background-color: #3c31dd;
+}
+
+.red {
+    background-color: #dd3f31;
+}
+
+.pink {
+    background-color: #ff0066;
+}
+
+// .dark {
+//     background-color: #0f0f10;
+// }
+
+
+/* TOOLS */
+// 1. SHAPEDIVIDER.APP
+// 2. APP.HAIKEI.APP
+// 3. KUTE.JS -> ANIMATION LIBRARY
