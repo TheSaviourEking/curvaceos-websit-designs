@@ -52,12 +52,11 @@ body {
         &.bubble{
             // background-color: #fff;
             .container {
-                background-color: #3c31dd;
                 padding: 20%;
                 background-color: rgba($color: #000000, $alpha: 0.5);
                 &:hover {
                     box-shadow: #3c31dd;
-                    color: #dd3f31;
+                    // color: #dd3f31;
                     transform: scale(110%);
                 }
             }
@@ -118,8 +117,12 @@ body {
             }
         }
 
-        .pink #visual > g:nth-child(2) {
-            visibility: hidden;
+        &.pink {
+            #visual > g:nth-child(2) {
+                visibility: hidden;
+            }
+            position: relative;
+            z-index: -2;
         }
     }
 }
@@ -155,6 +158,7 @@ body {
 .blob-motion {
     position: absolute;
     transform: translateY(-20%);
+    z-index: -1;
 }
 .blue {
     background-color: #3c31dd;
