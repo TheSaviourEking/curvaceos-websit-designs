@@ -123,6 +123,11 @@ body {
             }
             position: relative;
             z-index: -2;
+            background-color: #dd3f31;
+            outline: none;
+            border: none;
+            gap: 0;
+            margin: 0;
         }
     }
 }
@@ -169,7 +174,8 @@ body {
 }
 
 .pink {
-    background-color: #ff0066;
+    // background-color: #ff0066;
+    display: block;
 }
 
 // .dark {
