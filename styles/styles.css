@@ -46,13 +46,11 @@ body section .curve::after {
   z-index: -1;
 }
 body section.bubble .container {
-  background-color: #3c31dd;
   padding: 20%;
   background-color: rgba(0, 0, 0, 0.5);
 }
 body section.bubble .container:hover {
   box-shadow: #3c31dd;
-  color: #dd3f31;
   transform: scale(110%);
 }
 body section.bubble::before {
@@ -103,7 +101,11 @@ body section.red .wave .shape-fill {
     height: 229px;
   }
 }
-body section .pink #visual > g:nth-child(2) {
+body section.pink {
+  position: relative;
+  z-index: -2;
+}
+body section.pink #visual > g:nth-child(2) {
   visibility: hidden;
 }
 
@@ -131,6 +133,7 @@ body section .pink #visual > g:nth-child(2) {
 .blob-motion {
   position: absolute;
   transform: translateY(-20%);
+  z-index: -1;
 }
 
 .blue {
