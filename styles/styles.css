@@ -104,6 +104,11 @@ body section.red .wave .shape-fill {
 body section.pink {
   position: relative;
   z-index: -2;
+  background-color: #dd3f31;
+  outline: none;
+  border: none;
+  gap: 0;
+  margin: 0;
 }
 body section.pink #visual > g:nth-child(2) {
   visibility: hidden;
@@ -145,7 +150,7 @@ body section.pink #visual > g:nth-child(2) {
 }
 
 .pink {
-  background-color: #ff0066;
+  display: block;
 }
 
 /* TOOLS *//*# sourceMappingURL=styles.css.map */
