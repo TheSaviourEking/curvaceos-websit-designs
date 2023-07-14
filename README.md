@@ -1,1 +1,1 @@
-# curvaceos-websit-designs
+# curvaceos-website-designs
